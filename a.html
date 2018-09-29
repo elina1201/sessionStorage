@@ -1,0 +1,39 @@
+<!DOCTYPE HTML> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <title>本地存储SessionStorage</title> 
+        <script type="text/javascript"> 
+                window.onload = function() 
+                { 
+                        //首先获得body中的3个input元素 
+                        var msg = document.getElementById("msg"); 
+                        var setData = document.getElementById("setData"); 
+                         
+                        setData.onclick = function()//存入数据 
+                        { 
+                                if(msg.value) 
+                                { 
+                                        sessionStorage.setItem("data", msg.value); 
+                                        alert("信息已保存到data字段中"); 
+                                        window.location.href="页面B.html"
+                                } 
+                                else 
+                                { 
+                                        alert("信息不能为空"); 
+                                } 
+                        } 
+                } 
+        </script> 
+    </head> 
+     
+    <body> 
+        <input id="msg" type="text"/> 
+        <input id="setData" type="button" value="保存数据"/> 
+    </body> 
+</html> 
+
+
+---------------------
+
+本文来自 Brooke2016 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/qq_36010204/article/details/53836733?utm_source=copy 

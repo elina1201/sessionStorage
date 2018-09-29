@@ -1,0 +1,37 @@
+<!DOCTYPE HTML> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <title>本地存储SessionStorage</title> 
+        <script type="text/javascript"> 
+                window.onload = function() 
+                { 
+                        //首先获得body中的3个input元素 
+                        var msg = document.getElementById("msg"); 
+                        var getData = document.getElementById("getData"); 
+                        
+                         
+                        getData.onclick = function()//获取数据 
+                        { 
+                                var msg = sessionStorage.getItem("data"); 
+                                if(msg) 
+                                { 
+                                        alert("data字段中的值为：" + msg); 
+                                } 
+                                else 
+                                { 
+                                        alert("data字段无值！"); 
+                                } 
+                        } 
+                } 
+        </script> 
+    </head> 
+     
+    <body> 
+        <input id="getData" type="button" value="获取数据"/> 
+    </body> 
+</html> 
+
+---------------------
+
+本文来自 Brooke2016 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/qq_36010204/article/details/53836733?utm_source=copy 
